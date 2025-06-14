@@ -4,7 +4,6 @@ firebase-admin
 LivePopularTimes
 openai
 pydantic
-populartimes
 python-dotenv
 python-jose
 requests
