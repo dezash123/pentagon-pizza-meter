@@ -24,7 +24,7 @@ mkShell {
     
     pip install --upgrade pip > /dev/null 2>&1
     
-    pip install -r requirements.txt
+    pip install -r backend/requirements.txt
 
     export PYTHONPATH="$PWD:$PYTHONPATH"
   '';

@@ -3,15 +3,13 @@ from datetime import datetime
 import json
 import os
 from openai import OpenAI
-import time
-from pathlib import Path
-import random
 from typing import List, Optional
 from pydantic import BaseModel, Field
+from threading import Lock
 
 # Initialize OpenAI client
 client = OpenAI(
-    api_key=os.getenv('OPENAI_API_KEY')  # Make sure to set this environment variable
+    api_key=os.getenv('OPENAI_API_KEY')
 )
 
 # Pydantic Models
@@ -44,13 +42,12 @@ class DoomsdayAnalysis(BaseModel):
     detailed_results: List[ArticleResult]
     interpretation: str
 
-articles: List[Article] = []
-
 def fetch_fresh_headlines() -> List[Article]:
     """Fetch latest headlines from NewsAPI"""
     newsapi_key = os.getenv('NEWSAPI_KEY')
     if not newsapi_key:
-        raise ValueError("NEWSAPI_KEY environment variable not set")
+        print("Warning: NEWSAPI_KEY environment variable not set")
+        return []
     
     try:
         print("Fetching fresh headlines from NewsAPI...")
@@ -59,11 +56,11 @@ def fetch_fresh_headlines() -> List[Article]:
         params = {
             'apiKey': newsapi_key,
             'language': 'en',
-            'pageSize': 5,  # Get maximum results in one request
-            'country': 'us',  # Focus on US news
+            'pageSize': 5,
+            'country': 'us',
         }
         
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, timeout=10)
         response.raise_for_status()
         data = response.json()
         
@@ -76,24 +73,25 @@ def fetch_fresh_headlines() -> List[Article]:
         seen_urls = set()
         
         for article in data['articles']:
-            url = article['url']
+            url = article.get('url')
+            title = article.get('title')
+            description = article.get('description')
             
-            if url in seen_urls:
+            if not url or not title or url in seen_urls:
                 continue
             
             clean_article = Article(
-                title=article['title'],
-                summary=article['description'] or '',
+                title=title,
+                summary=description or '',
                 link=url,
-                published=article['publishedAt'],
-                source=article['source']['name']
+                published=article.get('publishedAt', ''),
+                source=article.get('source', {}).get('name', 'Unknown')
             )
             
             articles_list.append(clean_article)
             seen_urls.add(url)
-            print(f"Processing article: {clean_article.title}")
             
-            if len(articles_list) >= 20:
+            if len(articles_list) >= 5:
                 break
         
         return articles_list
@@ -146,7 +144,21 @@ Provide your response in this exact JSON format:
             explanation="Error in analysis"
         )
 
-def update_news():    
+def interpret_probability(probability: float) -> str:
+    """Provide a human-readable interpretation of the doomsday probability"""
+    if probability < 20:
+        return "Business as usual - no significant global threats detected"
+    elif probability < 40:
+        return "Some concerning developments, but nothing civilization-threatening"
+    elif probability < 60:
+        return "Multiple serious global challenges present"
+    elif probability < 80:
+        return "High level of global instability - multiple severe threats active"
+    else:
+        return "EXTREME ALERT: Multiple potential civilization-threatening events detected"
+
+def fetch_news_data() -> DoomsdayAnalysis:
+    """Fetch and analyze news articles for doomsday probability"""
     articles = fetch_fresh_headlines()
     
     if not articles:
@@ -159,19 +171,19 @@ def update_news():
             interpretation="Unable to assess - no news articles found"
         )
     
-    print(f"\nAnalyzing {len(articles)} articles...")
+    print(f"Analyzing {len(articles)} articles...")
     results: List[ArticleResult] = []
     total_severity = 0.0
     
     for i, article in enumerate(articles, 1):
         # Combine title and summary
-        full_text = f"{article.title} {article.summary}"
+        full_text = f"{article.title} {article.summary}".strip()
         
         # Skip empty articles
-        if not full_text.strip():
+        if not full_text:
             continue
             
-        print(f"\nAnalyzing article {i}/{len(articles)}: {article.title[:100]}...")
+        print(f"Analyzing article {i}/{len(articles)}: {article.title[:50]}...")
         
         # Analyze with GPT
         analysis = analyze_with_gpt(full_text)
@@ -201,27 +213,16 @@ def update_news():
         interpretation=interpret_probability(doomsday_probability)
     )
 
-def interpret_probability(probability: float) -> str:
-    """Provide a human-readable interpretation of the doomsday probability"""
-    if probability < 20:
-        return "Business as usual - no significant global threats detected"
-    elif probability < 40:
-        return "Some concerning developments, but nothing civilization-threatening"
-    elif probability < 60:
-        return "Multiple serious global challenges present"
-    elif probability < 80:
-        return "High level of global instability - multiple severe threats active"
-    else:
-        return "EXTREME ALERT: Multiple potential civilization-threatening events detected"
+# Global variable to store news data
+news_data: DoomsdayAnalysis = fetch_news_data()
+lock = Lock()
 
-if __name__ == "__main__":
-    if not os.getenv('OPENAI_API_KEY'):
-        print("Error: OPENAI_API_KEY environment variable not set")
-        print("Please set your OpenAI API key with:")
-        print("export OPENAI_API_KEY='your-api-key-here'")
-        exit(1)
-    
-    print("Starting doomsday analysis...")
-    results = calculate_doomsday_probability()
-    print("\nFinal Results:")
-    print(results.model_dump_json(indent=2)) 
+def update_news_data():
+    global news_data
+    with lock:
+        news_data = fetch_news_data()
+
+def get_news_data() -> Optional[DoomsdayAnalysis]:
+    """Get the current news data safely"""
+    with lock:
+        return news_data.copy() if news_data else None

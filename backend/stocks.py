@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 from typing import List, Optional
 from pydantic import BaseModel, Field
+from threading import Lock
 
 # Pydantic Models
 class StockData(BaseModel):
@@ -11,7 +12,7 @@ class StockData(BaseModel):
     change_percent: Optional[float] = None
     status: str = Field(default="unknown", description="Stock status: increasing, decreasing, or stable")
 
-class StocksAnalysis(BaseModel):
+class StockSummary(BaseModel):
     timestamp: str
     stocks: List[StockData]
     statistics: dict
@@ -27,15 +28,15 @@ DEFENSE_TICKERS = [
     "HII",   # Huntington Ingalls Industries
     "LHX",   # L3Harris Technologies
     "BAESY", # BAE Systems
-    "LDOS",  # Leidos Holdings
-    "AXON"   # Axon Enterprise
+    "PLTR",  # Palantir Technologies
+    "VIXY",   # VIX Index
 ]
 
 # Global variable to store stocks data
-stocks_data: Optional[StocksAnalysis] = None
+stock_data: Optional[StockSummary] = None
+lock = Lock()
 
-def fetch_defense_stocks_data() -> List[StockData]:
-    """Fetch current defense stocks data"""
+def fetch_stock_data() -> List[StockData]:
     data = []
     
     for ticker in DEFENSE_TICKERS:
@@ -56,13 +57,13 @@ def fetch_defense_stocks_data() -> List[StockData]:
                 status = "unknown"
             
             # Add to data list
-            stock_data = StockData(
+            stock_data_item = StockData(
                 ticker=ticker,
                 current_price=float(current_price) if current_price != 'N/A' else None,
                 change_percent=float(f"{price_change_percent:.2f}") if price_change_percent != 'N/A' else None,
                 status=status
             )
-            data.append(stock_data)
+            data.append(stock_data_item)
             
         except Exception as e:
             print(f"Error fetching data for {ticker}: {str(e)}")
@@ -74,15 +75,10 @@ def fetch_defense_stocks_data() -> List[StockData]:
                 status="error"
             ))
             continue
-    
     return data
 
-def update_stocks_data() -> StocksAnalysis:
-    """Update and return complete stocks analysis"""
-    global stocks_data
-    
-    print("Updating stocks data...")
-    stocks_list = fetch_defense_stocks_data()
+def fetch_stock_summary() -> StockSummary:
+    stocks_list = fetch_stock_data()
     
     # Calculate statistics
     valid_changes = [stock.change_percent for stock in stocks_list if stock.change_percent is not None]
@@ -103,21 +99,20 @@ def update_stocks_data() -> StocksAnalysis:
         "volatility": abs(max_change - min_change)
     }
     
-    stocks_data = StocksAnalysis(
+    stock_summary = StockSummary(
         timestamp=datetime.now().isoformat(),
         stocks=stocks_list,
         statistics=statistics,
         market_summary=market_summary
     )
     
-    print(f"Stocks data updated: {len(stocks_list)} stocks analyzed")
-    return stocks_data
+    return stock_summary
 
-def get_defense_stocks_data() -> Optional[StocksAnalysis]:
-    """Get current stocks data from memory"""
-    return stocks_data
+def update_stock_data():
+    global stock_data
+    with lock:
+        stock_data = fetch_stock_summary()
 
-if __name__ == "__main__":
-    import sys
-    data = update_stocks_data()
-    print(data.model_dump_json(indent=2)) 
+def get_stock_data() -> Optional[StockSummary]:
+    with lock:
+        return stock_data.copy() if stock_data else None

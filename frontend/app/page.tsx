@@ -13,89 +13,110 @@ const Map = dynamic(() => import("@/components/Map"), { ssr: false })
 interface NewsArticle {
   title: string
   published: string
-  link: string
   source: string
-  severity: number
-  explanation: string
+  analysis: {
+    severity: number
+    explanation: string
+  }
+  link: string
 }
 
-interface DefenseStock {
+interface NewsData {
+  timestamp: string
+  doomsday_probability: number
+  analysis_basis: number
+  detailed_results: NewsArticle[]
+  interpretation: string
+}
+
+interface StockData {
   ticker: string
-  change_percent: number
-  current_price: number
+  current_price: number | null
+  change_percent: number | null
   status: string
+}
+
+interface StockSummary {
+  timestamp: string
+  stocks: StockData[]
+  statistics: {
+    average_change_percent: number
+    max_change_percent: number
+    min_change_percent: number
+    stocks_analyzed: number
+    valid_data_points: number
+  }
+  market_summary: {
+    overall_trend: string
+    volatility: number
+  }
 }
 
 interface PizzaPlace {
   name: string
+  address: string
   coordinates: {
     lat: number
     lng: number
   }
   current_status: {
-    status: string
     current_popularity: number
     typical_popularity: number
+    busyness_ratio: number
+    percent_difference: number
+    status: string
   }
   ratings: {
-    google_rating: number
-    number_of_ratings: number
+    google_rating: number | null
+    number_of_ratings: number | null
   }
 }
 
-interface ApiResponse {
-  news_analysis: {
-    detailed_news_analysis: {
-      articles: NewsArticle[]
-    }
-    severity_distribution: {
-      counts: {
-        critical: number
-        low: number
-        high: number
-        medium: number
-      }
-    }
+interface PizzaData {
+  metadata: {
+    timestamp: string
+    location: string
+    total_pizza_places_found: number
+    places_with_current_data: number
   }
-  defense_stocks_analysis: {
-    detailed_stocks_data: DefenseStock[]
-    market_summary: {
-      volatility: number
-      overall_trend: string
-    }
-  }
-  local_pizza_analysis: {
-    detailed_places: PizzaPlace[]
-    busyness_metrics: {
-      places_by_status: {
-        places: {
-          very_busy: string[]
-          busy: string[]
-          typical: string[]
-          quiet: string[]
-          very_quiet: string[]
-        }
-      }
-    }
-  }
+  pizza_places: PizzaPlace[]
 }
 
 export default function PentagonPizzaTracker() {
   const [lastUpdate, setLastUpdate] = useState(new Date())
   const [isDarkMode, setIsDarkMode] = useState(true)
-  const [data, setData] = useState<ApiResponse | null>(null)
+  const [newsData, setNewsData] = useState<NewsData | null>(null)
+  const [stockData, setStockData] = useState<StockSummary | null>(null)
+  const [pizzaData, setPizzaData] = useState<PizzaData | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://pentagon-pizza-meter.onrender.com/read')
-        if (!response.ok) {
-          throw new Error('Failed to fetch data')
+        const baseUrl = 'http://localhost:8000' // Change this to your backend URL
+        
+        // Fetch all data in parallel
+        const [newsResponse, stocksResponse, pizzaResponse] = await Promise.all([
+          fetch(`${baseUrl}/news`),
+          fetch(`${baseUrl}/stocks`),
+          fetch(`${baseUrl}/pizza`)
+        ])
+
+        if (!newsResponse.ok || !stocksResponse.ok || !pizzaResponse.ok) {
+          throw new Error('Failed to fetch data from one or more endpoints')
         }
-        const jsonData = await response.json()
-        setData(jsonData)
+
+        const [newsJson, stocksJson, pizzaJson] = await Promise.all([
+          newsResponse.json(),
+          stocksResponse.json(),
+          pizzaResponse.json()
+        ])
+
+        setNewsData(newsJson)
+        setStockData(stocksJson)
+        setPizzaData(pizzaJson)
         setError(null)
+        setLastUpdate(new Date())
       } catch (err) {
         setError('Failed to fetch data. Please try again later.')
         console.error('Error fetching data:', err)
@@ -140,7 +161,7 @@ export default function PentagonPizzaTracker() {
     )
   }
 
-  if (!data) {
+  if (!newsData || !stockData || !pizzaData) {
     return (
       <div className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="flex flex-col items-center gap-3">
@@ -151,37 +172,51 @@ export default function PentagonPizzaTracker() {
     )
   }
 
-  const pizzaPlaces = data.local_pizza_analysis.detailed_places.map((place, index) => ({
+  const pizzaPlaces = pizzaData.pizza_places.map((place, index) => ({
     id: index + 1,
     name: place.name,
     type: "pizza" as const,
     lat: place.coordinates.lat,
     lng: place.coordinates.lng,
     activity: place.current_status.status,
-    rating: place.ratings.google_rating,
+    rating: place.ratings.google_rating || 0,
     orders: place.current_status.current_popularity
   }))
 
-  const stockData = data.defense_stocks_analysis.detailed_stocks_data
-    .sort((a, b) => Math.abs(b.change_percent) - Math.abs(a.change_percent))
-    .map(stock => ({
-      symbol: stock.ticker,
-      name: stock.ticker,
-      price: stock.current_price,
-      change: stock.change_percent,
-      changePercent: stock.change_percent
-    }))
+  const sortedStockData = stockData?.stocks
+    ? stockData.stocks
+        .filter(stock => stock.current_price !== null && stock.change_percent !== null)
+        .sort((a, b) => Math.abs(b.change_percent!) - Math.abs(a.change_percent!))
+        .map(stock => ({
+          symbol: stock.ticker,
+          name: stock.ticker, // Using ticker as name since backend doesn't provide company names
+          price: stock.current_price!,
+          change: stock.change_percent!,
+          changePercent: stock.change_percent!
+        }))
+    : []
 
-  const newsData = data.news_analysis.detailed_news_analysis.articles
-    .sort((a, b) => b.severity - a.severity)
-    .slice(0, 5)
-    .map((article, index) => ({
-      id: index + 1,
-      title: article.title,
-      time: new Date(article.published).toLocaleTimeString(),
-      source: article.source,
-      severity: article.severity
-    }))
+  const sortedNewsData = newsData?.detailed_results
+    ? newsData.detailed_results
+        .sort((a, b) => b.analysis.severity - a.analysis.severity)
+        .slice(0, 5)
+    : []
+
+  // Calculate average pizza popularity
+  const avgPizzaPopularity = pizzaData?.pizza_places && pizzaData.pizza_places.length > 0 
+    ? pizzaData.pizza_places.reduce((acc, place) => acc + place.current_status.current_popularity, 0) / pizzaData.pizza_places.length 
+    : 0
+
+  // Count very busy places
+  const veryBusyPlaces = pizzaData?.pizza_places
+    ? pizzaData.pizza_places.filter(place => 
+        place.current_status.status.toLowerCase().includes('busy') || 
+        place.current_status.percent_difference > 25
+      ).length
+    : 0
+
+  // Determine market trend
+  const marketTrend = stockData?.market_summary?.overall_trend?.toUpperCase() || "UNKNOWN"
 
   return (
     <div className={`min-h-screen lg:h-screen lg:overflow-hidden ${isDarkMode ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" : "bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50"}`}>
@@ -244,7 +279,7 @@ export default function PentagonPizzaTracker() {
                 <div className={`text-4xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"} relative`}>
                   <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
                   <span className="relative">
-                    {(data.local_pizza_analysis.detailed_places.reduce((acc, place) => acc + place.current_status.current_popularity, 0) / data.local_pizza_analysis.detailed_places.length).toFixed(1)}%
+                    {avgPizzaPopularity.toFixed(1)}%
                   </span>
                 </div>
               </div>
@@ -255,7 +290,7 @@ export default function PentagonPizzaTracker() {
                 <div className={`text-2xl font-bold flex items-center gap-2 justify-center ${isDarkMode ? "text-orange-400" : "text-orange-600"}`}>
                   <span className="relative group">
                     <div className="absolute -inset-2 bg-orange-500 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-                    <span className="relative">{data.local_pizza_analysis.busyness_metrics.places_by_status.places.very_busy.length}</span>
+                    <span className="relative">{veryBusyPlaces}</span>
                   </span>
                   <span className="text-sm font-medium text-gray-500">locations</span>
                 </div>
@@ -265,12 +300,12 @@ export default function PentagonPizzaTracker() {
                   MARKET SIGNAL
                 </div>
                 <div className={`text-lg font-bold ${
-                  data.defense_stocks_analysis.market_summary.overall_trend.toLowerCase() === "bullish" 
+                  marketTrend === "BULLISH" 
                     ? "text-green-400" 
                     : "text-red-400"
                 } relative group`}>
                   <div className="absolute -inset-2 bg-current rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
-                  <span className="relative">{data.defense_stocks_analysis.market_summary.overall_trend.toUpperCase()}</span>
+                  <span className="relative">{marketTrend}</span>
                 </div>
               </div>
             </div>
@@ -301,7 +336,7 @@ export default function PentagonPizzaTracker() {
             <Card className={`flex-shrink-0 ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
               <CardContent className="py-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {stockData.map((stock) => (
+                  {sortedStockData.map((stock) => (
                     <div
                       key={stock.symbol}
                       className={`p-2 rounded-lg ${
@@ -348,48 +383,45 @@ export default function PentagonPizzaTracker() {
             <Card className={`flex-1 lg:flex-1 ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
               <CardContent className="py-2">
                 <div className="space-y-3">
-                  {data.news_analysis.detailed_news_analysis.articles
-                    .sort((a, b) => b.severity - a.severity)
-                    .slice(0, 5)
-                    .map((article, index) => (
-                      <div
-                        key={index}
-                        className={`p-2 rounded-lg ${
-                          isDarkMode 
-                            ? "bg-gray-900/50 hover:bg-gray-900/70" 
-                            : "bg-gray-50/50 hover:bg-gray-100/50"
-                        } backdrop-blur-sm transition duration-200 group border-l-4 ${
-                          article.severity > 0.7 
-                            ? "border-red-500" 
-                            : article.severity > 0.4 
-                            ? "border-yellow-500" 
-                            : "border-green-500"
-                        }`}
-                      >
-                        <h3 className={`text-sm font-medium mb-1 line-clamp-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                          {article.title}
-                        </h3>
-                        <div className="flex items-center gap-2 text-xs flex-wrap">
-                          <span className={`px-2 py-0.5 rounded-full text-xs ${
-                            article.severity > 0.7 
-                              ? "bg-red-500/20 text-red-300" 
-                              : article.severity > 0.4 
-                              ? "bg-yellow-500/20 text-yellow-300" 
-                              : "bg-green-500/20 text-green-300"
-                          }`}>
-                            {(article.severity * 100).toFixed(0)}% Severity
-                          </span>
-                          <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
-                          <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
-                            {article.source}
-                          </span>
-                          <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
-                          <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
-                            {new Date(article.published).toLocaleTimeString()}
-                          </span>
-                        </div>
+                  {sortedNewsData.map((article, index) => (
+                    <div
+                      key={index}
+                      className={`p-2 rounded-lg ${
+                        isDarkMode 
+                          ? "bg-gray-900/50 hover:bg-gray-900/70" 
+                          : "bg-gray-50/50 hover:bg-gray-100/50"
+                      } backdrop-blur-sm transition duration-200 group border-l-4 ${
+                        article.analysis.severity > 0.7 
+                          ? "border-red-500" 
+                          : article.analysis.severity > 0.4 
+                          ? "border-yellow-500" 
+                          : "border-green-500"
+                      }`}
+                    >
+                      <h3 className={`text-sm font-medium mb-1 line-clamp-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+                        {article.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-xs flex-wrap">
+                        <span className={`px-2 py-0.5 rounded-full text-xs ${
+                          article.analysis.severity > 0.7 
+                            ? "bg-red-500/20 text-red-300" 
+                            : article.analysis.severity > 0.4 
+                            ? "bg-yellow-500/20 text-yellow-300" 
+                            : "bg-green-500/20 text-green-300"
+                        }`}>
+                          {(article.analysis.severity * 100).toFixed(0)}% Severity
+                        </span>
+                        <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
+                        <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
+                          {article.source}
+                        </span>
+                        <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
+                        <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
+                          {new Date(article.published).toLocaleTimeString()}
+                        </span>
                       </div>
-                    ))}
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
