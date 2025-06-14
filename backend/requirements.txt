@@ -1,0 +1,13 @@
+beautifulsoup4
+fastapi
+firebase-admin
+LivePopularTimes
+openai
+pydantic
+python-dotenv
+python-jose
+requests
+selenium
+uvicorn
+yfinance
+git+https://github.com/m-wrzr/populartimes

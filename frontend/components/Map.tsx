@@ -408,7 +408,8 @@ export default function Map({ restaurants, isDarkMode, getActivityColor, getActi
         center={PENTAGON_CENTER}
         zoom={13}
         style={{ height: "100%", width: "100%" }}
-        zoomControl={true}
+        zoomControl={false}
+        attributionControl={false}
         dragging={true}
         zoomAnimation={true}
         wheelDebounceTime={100}
@@ -417,7 +418,6 @@ export default function Map({ restaurants, isDarkMode, getActivityColor, getActi
       >
         <MapInitializer />
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url={isDarkMode 
             ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
