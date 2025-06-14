@@ -29,7 +29,7 @@ DEFENSE_TICKERS = [
     "LHX",   # L3Harris Technologies
     "BAESY", # BAE Systems
     "PLTR",  # Palantir Technologies
-    "VIXY",   # VIX Index
+    "NVDA",  # Nvidia
 ]
 
 # Global variable to store stocks data
