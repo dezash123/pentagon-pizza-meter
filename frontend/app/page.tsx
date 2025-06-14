@@ -89,7 +89,7 @@ export default function PentagonPizzaTracker() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://pentagon-pizza-index.onrender.com/read')
+        const response = await fetch('https://pentagon-pizza-meter.onrender.com/read')
         if (!response.ok) {
           throw new Error('Failed to fetch data')
         }
