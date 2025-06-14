@@ -1,0 +1,6 @@
+.env
+.direnv
+.venv
+venv
+__pycache__
+sak.json

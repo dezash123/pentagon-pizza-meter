@@ -1,0 +1,2427 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-14T12:05:47.910705",
+    "location": "Pentagon Area",
+    "radius_miles": 5,
+    "current_time": "12:00",
+    "current_day": "Saturday",
+    "total_places_found": 159
+  },
+  "places": [
+    {
+      "name": "Subway",
+      "address": "2010 P Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90943579999999,
+        "lng": -77.0453931
+      },
+      "current_popularity": 100,
+      "typical_popularity": 33,
+      "busyness_ratio": 3.03,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.4,
+      "rating_n": 117
+    },
+    {
+      "name": "Subway",
+      "address": "90 K Street Northeast Suite 105, Washington",
+      "coordinates": {
+        "lat": 38.9030265,
+        "lng": -77.0061264
+      },
+      "current_popularity": 67,
+      "typical_popularity": 27,
+      "busyness_ratio": 2.48,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 105
+    },
+    {
+      "name": "The Queen Vic",
+      "address": "1206 H Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.90039030000001,
+        "lng": -76.9898571
+      },
+      "current_popularity": 69,
+      "typical_popularity": 28,
+      "busyness_ratio": 2.46,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 983
+    },
+    {
+      "name": "Pizza Hut",
+      "address": "6293 Oxon Hill Road, Oxon Hill",
+      "coordinates": {
+        "lat": 38.80386529999999,
+        "lng": -76.9888715
+      },
+      "current_popularity": 100,
+      "typical_popularity": 45,
+      "busyness_ratio": 2.22,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.4,
+      "rating_n": 812
+    },
+    {
+      "name": "Pizzolis Pizza DC",
+      "address": "1418 12th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9089775,
+        "lng": -77.02802609999999
+      },
+      "current_popularity": 100,
+      "typical_popularity": 47,
+      "busyness_ratio": 2.13,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 791
+    },
+    {
+      "name": "The Wonderland Ballroom",
+      "address": "1101 Kenyon Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.929902,
+        "lng": -77.02798539999999
+      },
+      "current_popularity": 27,
+      "typical_popularity": 14,
+      "busyness_ratio": 1.93,
+      "types": [
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1097
+    },
+    {
+      "name": "Subway",
+      "address": "1101 4th Street Southwest 4th Street Bldg, Unit 130, Washington",
+      "coordinates": {
+        "lat": 38.8778002,
+        "lng": -77.0179806
+      },
+      "current_popularity": 100,
+      "typical_popularity": 56,
+      "busyness_ratio": 1.79,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.8,
+      "rating_n": 121
+    },
+    {
+      "name": "Menomale",
+      "address": "2711 12th Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.9248784,
+        "lng": -76.99025689999999
+      },
+      "current_popularity": 76,
+      "typical_popularity": 44,
+      "busyness_ratio": 1.73,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "rating_n": 938
+    },
+    {
+      "name": "P.F. Chang's",
+      "address": "901 North Glebe Road, Arlington",
+      "coordinates": {
+        "lat": 38.88111149999999,
+        "lng": -77.1150541
+      },
+      "current_popularity": 66,
+      "typical_popularity": 40,
+      "busyness_ratio": 1.65,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "rating_n": 1498
+    },
+    {
+      "name": "Barcelona Wine Bar",
+      "address": "1622 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9121143,
+        "lng": -77.03221909999999
+      },
+      "current_popularity": 30,
+      "typical_popularity": 21,
+      "busyness_ratio": 1.43,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 3595
+    },
+    {
+      "name": "Subway",
+      "address": "3720 Georgia Avenue Northwest Bay E, Washington",
+      "coordinates": {
+        "lat": 38.9366806,
+        "lng": -77.02477499999999
+      },
+      "current_popularity": 43,
+      "typical_popularity": 31,
+      "busyness_ratio": 1.39,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.8,
+      "rating_n": 132
+    },
+    {
+      "name": "Five Guys",
+      "address": "725 King Street, Alexandria",
+      "coordinates": {
+        "lat": 38.8054066,
+        "lng": -77.04786659999999
+      },
+      "current_popularity": 100,
+      "typical_popularity": 73,
+      "busyness_ratio": 1.37,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 910
+    },
+    {
+      "name": "Subway",
+      "address": "3504 12th Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.9327708,
+        "lng": -76.9911268
+      },
+      "current_popularity": 64,
+      "typical_popularity": 53,
+      "busyness_ratio": 1.21,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.9,
+      "rating_n": 109
+    },
+    {
+      "name": "Shake Shack F Street",
+      "address": "800 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89705279999999,
+        "lng": -77.0238447
+      },
+      "current_popularity": 89,
+      "typical_popularity": 77,
+      "busyness_ratio": 1.16,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 4702
+    },
+    {
+      "name": "Shake Shack F Street",
+      "address": "800 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89705279999999,
+        "lng": -77.0238447
+      },
+      "current_popularity": 89,
+      "typical_popularity": 77,
+      "busyness_ratio": 1.16,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 4702
+    },
+    {
+      "name": "Absolute Noodle and Sushi Bar",
+      "address": "772 5th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8992107,
+        "lng": -77.01912159999999
+      },
+      "current_popularity": 34,
+      "typical_popularity": 30,
+      "busyness_ratio": 1.13,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 904
+    },
+    {
+      "name": "Buffalo Wild Wings",
+      "address": "2450 Crystal Drive, Arlington",
+      "coordinates": {
+        "lat": 38.8527335,
+        "lng": -77.0501574
+      },
+      "current_popularity": 47,
+      "typical_popularity": 47,
+      "busyness_ratio": 1.0,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3,
+      "rating_n": 1526
+    },
+    {
+      "name": "Buffalo Wild Wings",
+      "address": "2450 Crystal Drive, Arlington",
+      "coordinates": {
+        "lat": 38.8527335,
+        "lng": -77.0501574
+      },
+      "current_popularity": 47,
+      "typical_popularity": 47,
+      "busyness_ratio": 1.0,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3,
+      "rating_n": 1526
+    },
+    {
+      "name": "Ted's Bulletin - Capitol Hill",
+      "address": "505 8th Street Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8824511,
+        "lng": -76.9952615
+      },
+      "current_popularity": 93,
+      "typical_popularity": 95,
+      "busyness_ratio": 0.98,
+      "types": [
+        "cafe",
+        "bakery",
+        "restaurant",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 3963
+    },
+    {
+      "name": "Bluejacket",
+      "address": "300 Tingey Street Southeast #180, Washington",
+      "coordinates": {
+        "lat": 38.8751083,
+        "lng": -77.00081349999999
+      },
+      "current_popularity": 56,
+      "typical_popularity": 59,
+      "busyness_ratio": 0.95,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 1398
+    },
+    {
+      "name": "Kelly's Irish Times",
+      "address": "14 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8971595,
+        "lng": -77.00963589999999
+      },
+      "current_popularity": 21,
+      "typical_popularity": 22,
+      "busyness_ratio": 0.95,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1124
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "address": "2900 Clarendon Boulevard, Arlington",
+      "coordinates": {
+        "lat": 38.88798479999999,
+        "lng": -77.0934697
+      },
+      "current_popularity": 38,
+      "typical_popularity": 41,
+      "busyness_ratio": 0.93,
+      "types": [
+        "restaurant",
+        "meal_takeaway",
+        "bakery",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 3256
+    },
+    {
+      "name": "The Cheesecake Factory",
+      "address": "2900 Clarendon Boulevard, Arlington",
+      "coordinates": {
+        "lat": 38.88798479999999,
+        "lng": -77.0934697
+      },
+      "current_popularity": 38,
+      "typical_popularity": 41,
+      "busyness_ratio": 0.93,
+      "types": [
+        "restaurant",
+        "meal_takeaway",
+        "bakery",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 3256
+    },
+    {
+      "name": "matchbox",
+      "address": "521 8th Street Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8820955,
+        "lng": -76.9953429
+      },
+      "current_popularity": 70,
+      "typical_popularity": 75,
+      "busyness_ratio": 0.93,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1806
+    },
+    {
+      "name": "Georgia Brown's",
+      "address": "950 15th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9018744,
+        "lng": -77.03476409999999
+      },
+      "current_popularity": 29,
+      "typical_popularity": 32,
+      "busyness_ratio": 0.91,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 4062
+    },
+    {
+      "name": "Pavilion Caf\u00e9",
+      "address": "The Sculpture Garden, 7th Street &, Constitution Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8912713,
+        "lng": -77.0235268
+      },
+      "current_popularity": 76,
+      "typical_popularity": 84,
+      "busyness_ratio": 0.9,
+      "types": [
+        "cafe",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.9,
+      "rating_n": 632
+    },
+    {
+      "name": "Jimmy John's",
+      "address": "1101 14th Street Northwest #103, Washington",
+      "coordinates": {
+        "lat": 38.9038935,
+        "lng": -77.0316461
+      },
+      "current_popularity": 48,
+      "typical_popularity": 56,
+      "busyness_ratio": 0.86,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.9,
+      "rating_n": 239
+    },
+    {
+      "name": "Cleveland Park Bar and Grill",
+      "address": "3407 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9350509,
+        "lng": -77.05780759999999
+      },
+      "current_popularity": 59,
+      "typical_popularity": 70,
+      "busyness_ratio": 0.84,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 422
+    },
+    {
+      "name": "Cleveland Park Bar and Grill",
+      "address": "3407 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9350509,
+        "lng": -77.05780759999999
+      },
+      "current_popularity": 59,
+      "typical_popularity": 70,
+      "busyness_ratio": 0.84,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 422
+    },
+    {
+      "name": "Shake Shack Dupont Circle",
+      "address": "1216 18th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9063519,
+        "lng": -77.04185799999999
+      },
+      "current_popularity": 34,
+      "typical_popularity": 41,
+      "busyness_ratio": 0.83,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 2887
+    },
+    {
+      "name": "Shake Shack Dupont Circle",
+      "address": "1216 18th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9063519,
+        "lng": -77.04185799999999
+      },
+      "current_popularity": 34,
+      "typical_popularity": 41,
+      "busyness_ratio": 0.83,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 2887
+    },
+    {
+      "name": "Royal Farms",
+      "address": "100 Monument Avenue #2, Oxon Hill",
+      "coordinates": {
+        "lat": 38.79947319999999,
+        "lng": -77.0031906
+      },
+      "current_popularity": 82,
+      "typical_popularity": 100,
+      "busyness_ratio": 0.82,
+      "types": [
+        "convenience_store",
+        "atm",
+        "gas_station",
+        "meal_takeaway",
+        "grocery_or_supermarket",
+        "finance",
+        "restaurant",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 2.9,
+      "rating_n": 232
+    },
+    {
+      "name": "Kramers",
+      "address": "1517 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9108374,
+        "lng": -77.0437687
+      },
+      "current_popularity": 73,
+      "typical_popularity": 89,
+      "busyness_ratio": 0.82,
+      "types": [
+        "book_store",
+        "bar",
+        "cafe",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 4486
+    },
+    {
+      "name": "Domino's Pizza",
+      "address": "900 M Street Southeast, Washington",
+      "coordinates": {
+        "lat": 38.87667649999999,
+        "lng": -76.99334619999999
+      },
+      "current_popularity": 49,
+      "typical_popularity": 61,
+      "busyness_ratio": 0.8,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 2.6,
+      "rating_n": 806
+    },
+    {
+      "name": "Founding Farmers DC",
+      "address": "1924 Pennsylvania Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90028059999999,
+        "lng": -77.0444736
+      },
+      "current_popularity": 78,
+      "typical_popularity": 100,
+      "busyness_ratio": 0.78,
+      "types": [
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 18958
+    },
+    {
+      "name": "Medium Rare",
+      "address": "3500 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.93575269999999,
+        "lng": -77.0589179
+      },
+      "current_popularity": 51,
+      "typical_popularity": 66,
+      "busyness_ratio": 0.77,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 1821
+    },
+    {
+      "name": "Boundary Stone",
+      "address": "116 Rhode Island Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.91527219999999,
+        "lng": -77.01274099999999
+      },
+      "current_popularity": 41,
+      "typical_popularity": 55,
+      "busyness_ratio": 0.75,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 953
+    },
+    {
+      "name": "Oyamel",
+      "address": "401 7th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8950104,
+        "lng": -77.0217449
+      },
+      "current_popularity": 44,
+      "typical_popularity": 65,
+      "busyness_ratio": 0.68,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 6163
+    },
+    {
+      "name": "Jaleo",
+      "address": "480 7th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8959259,
+        "lng": -77.0222721
+      },
+      "current_popularity": 36,
+      "typical_popularity": 54,
+      "busyness_ratio": 0.67,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 4686
+    },
+    {
+      "name": "California Pizza Kitchen at Pentagon",
+      "address": "1201 South Hayes Street, Arlington",
+      "coordinates": {
+        "lat": 38.8620008,
+        "lng": -77.059214
+      },
+      "current_popularity": 32,
+      "typical_popularity": 51,
+      "busyness_ratio": 0.63,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "bar",
+        "restaurant",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "rating_n": 780
+    },
+    {
+      "name": "Zaytinya",
+      "address": "701 9th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89885599999999,
+        "lng": -77.0236458
+      },
+      "current_popularity": 27,
+      "typical_popularity": 43,
+      "busyness_ratio": 0.63,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 8397
+    },
+    {
+      "name": "Olive Garden Italian Restaurant",
+      "address": "3548 South Jefferson Street #52, Falls Church",
+      "coordinates": {
+        "lat": 38.84697299999999,
+        "lng": -77.118949
+      },
+      "current_popularity": 24,
+      "typical_popularity": 39,
+      "busyness_ratio": 0.62,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 3181
+    },
+    {
+      "name": "Clyde's of Georgetown",
+      "address": "3236 M Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9050182,
+        "lng": -77.0640641
+      },
+      "current_popularity": 39,
+      "typical_popularity": 63,
+      "busyness_ratio": 0.62,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 3281
+    },
+    {
+      "name": "Subway",
+      "address": "3045 Columbia Pike, Arlington",
+      "coordinates": {
+        "lat": 38.86239519999999,
+        "lng": -77.0890048
+      },
+      "current_popularity": 29,
+      "typical_popularity": 49,
+      "busyness_ratio": 0.59,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.3,
+      "rating_n": 420
+    },
+    {
+      "name": "Spices Asian Restaurant And Sushi Bar",
+      "address": "3333 Connecticut Avenue Northwest STE A, Washington",
+      "coordinates": {
+        "lat": 38.93449740000001,
+        "lng": -77.0574993
+      },
+      "current_popularity": 30,
+      "typical_popularity": 51,
+      "busyness_ratio": 0.59,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 495
+    },
+    {
+      "name": "Hard Rock Cafe Washington DC",
+      "address": "999 E Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89635359999999,
+        "lng": -77.02584829999999
+      },
+      "current_popularity": 36,
+      "typical_popularity": 61,
+      "busyness_ratio": 0.59,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 6363
+    },
+    {
+      "name": "Carmine's - Washington DC",
+      "address": "425 7th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89568510000001,
+        "lng": -77.0217655
+      },
+      "current_popularity": 17,
+      "typical_popularity": 30,
+      "busyness_ratio": 0.57,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 5195
+    },
+    {
+      "name": "Carmine's - Washington DC",
+      "address": "425 7th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89568510000001,
+        "lng": -77.0217655
+      },
+      "current_popularity": 17,
+      "typical_popularity": 30,
+      "busyness_ratio": 0.57,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 5195
+    },
+    {
+      "name": "Cuba Libre Restaurant & Rum Bar",
+      "address": "801 9th Street Northwest suite a, Washington",
+      "coordinates": {
+        "lat": 38.9000982,
+        "lng": -77.0236138
+      },
+      "current_popularity": 4,
+      "typical_popularity": 7,
+      "busyness_ratio": 0.57,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 5208
+    },
+    {
+      "name": "Toki Underground",
+      "address": "1234 H Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.9004044,
+        "lng": -76.9890374
+      },
+      "current_popularity": 17,
+      "typical_popularity": 30,
+      "busyness_ratio": 0.57,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 1736
+    },
+    {
+      "name": "The Liberty Tavern",
+      "address": "3195 Wilson Boulevard, Arlington",
+      "coordinates": {
+        "lat": 38.8863802,
+        "lng": -77.09687459999999
+      },
+      "current_popularity": 36,
+      "typical_popularity": 64,
+      "busyness_ratio": 0.56,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 1645
+    },
+    {
+      "name": "The Bottom Line",
+      "address": "1716 I Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90120270000001,
+        "lng": -77.0403427
+      },
+      "current_popularity": 27,
+      "typical_popularity": 49,
+      "busyness_ratio": 0.55,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 980
+    },
+    {
+      "name": "The Italian Store at Lyon Village",
+      "address": "3123 Lee Highway, Arlington",
+      "coordinates": {
+        "lat": 38.8965722,
+        "lng": -77.0964975
+      },
+      "current_popularity": 46,
+      "typical_popularity": 85,
+      "busyness_ratio": 0.54,
+      "types": [
+        "meal_takeaway",
+        "grocery_or_supermarket",
+        "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 1602
+    },
+    {
+      "name": "The Italian Store at Lyon Village",
+      "address": "3123 Lee Highway, Arlington",
+      "coordinates": {
+        "lat": 38.8965722,
+        "lng": -77.0964975
+      },
+      "current_popularity": 46,
+      "typical_popularity": 85,
+      "busyness_ratio": 0.54,
+      "types": [
+        "meal_takeaway",
+        "grocery_or_supermarket",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 1602
+    },
+    {
+      "name": "Danny's Carryout",
+      "address": "6258 Oxon Hill Road, Oxon Hill",
+      "coordinates": {
+        "lat": 38.8032072,
+        "lng": -76.9876414
+      },
+      "current_popularity": 29,
+      "typical_popularity": 55,
+      "busyness_ratio": 0.53,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.9,
+      "rating_n": 449
+    },
+    {
+      "name": "Clyde's of Gallery Place",
+      "address": "707 7th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8988244,
+        "lng": -77.02172929999999
+      },
+      "current_popularity": 32,
+      "typical_popularity": 61,
+      "busyness_ratio": 0.52,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 3901
+    },
+    {
+      "name": "Founding Farmers Fishers & Bakers DC: Georgetown",
+      "address": "The Washington, Harbour at The Georgetown Waterfront, 3000 K Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9017801,
+        "lng": -77.0597323
+      },
+      "current_popularity": 36,
+      "typical_popularity": 69,
+      "busyness_ratio": 0.52,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 6125
+    },
+    {
+      "name": "Taco Bell",
+      "address": "6315 Oxon Hill Road, Oxon Hill",
+      "coordinates": {
+        "lat": 38.80355710000001,
+        "lng": -76.99091930000002
+      },
+      "current_popularity": 48,
+      "typical_popularity": 94,
+      "busyness_ratio": 0.51,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.6,
+      "rating_n": 889
+    },
+    {
+      "name": "Domino's Pizza",
+      "address": "1335 2nd Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.9081057,
+        "lng": -77.00329040000001
+      },
+      "current_popularity": 27,
+      "typical_popularity": 53,
+      "busyness_ratio": 0.51,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 2.3,
+      "rating_n": 531
+    },
+    {
+      "name": "Union Pub",
+      "address": "201 Massachusetts Avenue Northeast, Washington",
+      "coordinates": {
+        "lat": 38.894588,
+        "lng": -77.00304
+      },
+      "current_popularity": 30,
+      "typical_popularity": 59,
+      "busyness_ratio": 0.51,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 1076
+    },
+    {
+      "name": "Blue Duck Tavern",
+      "address": "1201 24th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9055579,
+        "lng": -77.0511497
+      },
+      "current_popularity": 49,
+      "typical_popularity": 97,
+      "busyness_ratio": 0.51,
+      "types": [
+        "night_club",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 1859
+    },
+    {
+      "name": "Bonchon Arlington",
+      "address": "2201 North Pershing Drive Suite E, Arlington",
+      "coordinates": {
+        "lat": 38.8808385,
+        "lng": -77.0859677
+      },
+      "current_popularity": 30,
+      "typical_popularity": 60,
+      "busyness_ratio": 0.5,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 868
+    },
+    {
+      "name": "ChurchKey",
+      "address": "1337 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90849229999999,
+        "lng": -77.03169179999999
+      },
+      "current_popularity": 15,
+      "typical_popularity": 30,
+      "busyness_ratio": 0.5,
+      "types": [
+        "bar",
+        "night_club",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 2251
+    },
+    {
+      "name": "Nanny O'Brien's",
+      "address": "3319 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.93409219999999,
+        "lng": -77.05729509999999
+      },
+      "current_popularity": 22,
+      "typical_popularity": 44,
+      "busyness_ratio": 0.5,
+      "types": [
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 503
+    },
+    {
+      "name": "Busboys and Poets",
+      "address": "2021 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9179302,
+        "lng": -77.0316613
+      },
+      "current_popularity": 39,
+      "typical_popularity": 82,
+      "busyness_ratio": 0.48,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 5093
+    },
+    {
+      "name": "Le Diplomate",
+      "address": "1601 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.911365,
+        "lng": -77.0316635
+      },
+      "current_popularity": 36,
+      "typical_popularity": 76,
+      "busyness_ratio": 0.47,
+      "types": [
+        "restaurant",
+        "meal_takeaway",
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 7286
+    },
+    {
+      "name": "Ben's Chili Bowl",
+      "address": "1213 U Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.91721889999999,
+        "lng": -77.02876289999999
+      },
+      "current_popularity": 25,
+      "typical_popularity": 53,
+      "busyness_ratio": 0.47,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 7362
+    },
+    {
+      "name": "Henry's Soul Cafe",
+      "address": "5431 Indian Head Highway, Oxon Hill",
+      "coordinates": {
+        "lat": 38.8153334,
+        "lng": -76.99929519999999
+      },
+      "current_popularity": 14,
+      "typical_popularity": 30,
+      "busyness_ratio": 0.47,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.9,
+      "rating_n": 1589
+    },
+    {
+      "name": "Le Diplomate",
+      "address": "1601 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.911365,
+        "lng": -77.0316635
+      },
+      "current_popularity": 36,
+      "typical_popularity": 76,
+      "busyness_ratio": 0.47,
+      "types": [
+        "restaurant",
+        "meal_takeaway",
+        "cafe",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 7286
+    },
+    {
+      "name": "Shaw's Tavern",
+      "address": "520 Florida Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9151331,
+        "lng": -77.01966920000001
+      },
+      "current_popularity": 39,
+      "typical_popularity": 85,
+      "busyness_ratio": 0.46,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "rating_n": 2909
+    },
+    {
+      "name": "Hong Kong Delite Carry Out",
+      "address": "3123 Martin Luther King Junior Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8434053,
+        "lng": -77.000112
+      },
+      "current_popularity": 33,
+      "typical_popularity": 74,
+      "busyness_ratio": 0.45,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.7,
+      "rating_n": 390
+    },
+    {
+      "name": "American Ice Company",
+      "address": "917 V Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9184172,
+        "lng": -77.0252773
+      },
+      "current_popularity": 5,
+      "typical_popularity": 11,
+      "busyness_ratio": 0.45,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 521
+    },
+    {
+      "name": "Taco Bell",
+      "address": "4923 Lee Highway, Arlington",
+      "coordinates": {
+        "lat": 38.8966933,
+        "lng": -77.1286918
+      },
+      "current_popularity": 30,
+      "typical_popularity": 68,
+      "busyness_ratio": 0.44,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.7,
+      "rating_n": 741
+    },
+    {
+      "name": "Penn Quarter Sports Tavern",
+      "address": "639 Indiana Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8942805,
+        "lng": -77.0214384
+      },
+      "current_popularity": 26,
+      "typical_popularity": 62,
+      "busyness_ratio": 0.42,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1984
+    },
+    {
+      "name": "The Coupe",
+      "address": "3415 11th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.93258410000001,
+        "lng": -77.0282306
+      },
+      "current_popularity": 36,
+      "typical_popularity": 88,
+      "busyness_ratio": 0.41,
+      "types": [
+        "cafe",
+        "bar",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1892
+    },
+    {
+      "name": "Surfside",
+      "address": "4200 Wisconsin Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9436233,
+        "lng": -77.07776179999999
+      },
+      "current_popularity": 30,
+      "typical_popularity": 80,
+      "busyness_ratio": 0.38,
+      "types": [
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1078
+    },
+    {
+      "name": "Ella's Wood Fired Kitchen",
+      "address": "610 9th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8977776,
+        "lng": -77.0242143
+      },
+      "current_popularity": 19,
+      "typical_popularity": 50,
+      "busyness_ratio": 0.38,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 1511
+    },
+    {
+      "name": "Filomena Ristorante",
+      "address": "1063 Wisconsin Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90442789999999,
+        "lng": -77.0626066
+      },
+      "current_popularity": 25,
+      "typical_popularity": 65,
+      "busyness_ratio": 0.38,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 5226
+    },
+    {
+      "name": "The Dubliner Restaurant",
+      "address": "4 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8971526,
+        "lng": -77.0094901
+      },
+      "current_popularity": 19,
+      "typical_popularity": 53,
+      "busyness_ratio": 0.36,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 3506
+    },
+    {
+      "name": "Taco Bell",
+      "address": "4681 King Street, Arlington",
+      "coordinates": {
+        "lat": 38.84280989999999,
+        "lng": -77.1081715
+      },
+      "current_popularity": 26,
+      "typical_popularity": 74,
+      "busyness_ratio": 0.35,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.7,
+      "rating_n": 1688
+    },
+    {
+      "name": "TNR Cafe",
+      "address": "2049 Wilson Boulevard, Arlington",
+      "coordinates": {
+        "lat": 38.8919529,
+        "lng": -77.08408299999999
+      },
+      "current_popularity": 13,
+      "typical_popularity": 37,
+      "busyness_ratio": 0.35,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 968
+    },
+    {
+      "name": "Fogo de Ch\u00e3o Brazilian Steakhouse",
+      "address": "1101 Pennsylvania Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8951972,
+        "lng": -77.0273204
+      },
+      "current_popularity": 11,
+      "typical_popularity": 31,
+      "busyness_ratio": 0.35,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "rating_n": 8956
+    },
+    {
+      "name": "Lebanese Taverna",
+      "address": "2641 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9247287,
+        "lng": -77.0518822
+      },
+      "current_popularity": 14,
+      "typical_popularity": 45,
+      "busyness_ratio": 0.31,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1645
+    },
+    {
+      "name": "Tonic At Quigley's",
+      "address": "2036 G Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89809399999999,
+        "lng": -77.04646129999999
+      },
+      "current_popularity": 16,
+      "typical_popularity": 51,
+      "busyness_ratio": 0.31,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1824
+    },
+    {
+      "name": "Hot N Juicy Crawfish",
+      "address": "2651 Connecticut Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.92502440000001,
+        "lng": -77.0520202
+      },
+      "current_popularity": 22,
+      "typical_popularity": 74,
+      "busyness_ratio": 0.3,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 2916
+    },
+    {
+      "name": "Tune Inn Restaurant & Bar",
+      "address": "331 1/2 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8863597,
+        "lng": -77.0010435
+      },
+      "current_popularity": 15,
+      "typical_popularity": 52,
+      "busyness_ratio": 0.29,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 923
+    },
+    {
+      "name": "Outback Steakhouse",
+      "address": "4821 1st Street North, Arlington",
+      "coordinates": {
+        "lat": 38.86769200000001,
+        "lng": -77.1174846
+      },
+      "current_popularity": 12,
+      "typical_popularity": 44,
+      "busyness_ratio": 0.27,
+      "types": [
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1664
+    },
+    {
+      "name": "We, The Pizza",
+      "address": "305 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8866041,
+        "lng": -77.0017192
+      },
+      "current_popularity": 16,
+      "typical_popularity": 72,
+      "busyness_ratio": 0.22,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 2670
+    },
+    {
+      "name": "We, The Pizza",
+      "address": "305 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8866041,
+        "lng": -77.0017192
+      },
+      "current_popularity": 16,
+      "typical_popularity": 72,
+      "busyness_ratio": 0.22,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 2670
+    },
+    {
+      "name": "Busboys and Poets",
+      "address": "450 K Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90223710000001,
+        "lng": -77.0180877
+      },
+      "current_popularity": 21,
+      "typical_popularity": 100,
+      "busyness_ratio": 0.21,
+      "types": [
+        "art_gallery",
+        "cafe",
+        "book_store",
+        "restaurant",
+        "food",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 3969
+    },
+    {
+      "name": "Cactus Cantina",
+      "address": "3300 Wisconsin Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9336569,
+        "lng": -77.0726853
+      },
+      "current_popularity": 12,
+      "typical_popularity": 57,
+      "busyness_ratio": 0.21,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 2141
+    },
+    {
+      "name": "Astro Beer Hall",
+      "address": "1306 G Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8981165,
+        "lng": -77.0302796
+      },
+      "current_popularity": 9,
+      "typical_popularity": 42,
+      "busyness_ratio": 0.21,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "rating_n": 972
+    },
+    {
+      "name": "District Taco",
+      "address": "1309 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8976072,
+        "lng": -77.0301325
+      },
+      "current_popularity": 17,
+      "typical_popularity": 87,
+      "busyness_ratio": 0.2,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 3727
+    },
+    {
+      "name": "Central Michel Richard",
+      "address": "1001 Pennsylvania Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.8950321,
+        "lng": -77.0267326
+      },
+      "current_popularity": 10,
+      "typical_popularity": 50,
+      "busyness_ratio": 0.2,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 1093
+    },
+    {
+      "name": "Hunan Dynasty",
+      "address": "215 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8870361,
+        "lng": -77.0029
+      },
+      "current_popularity": 6,
+      "typical_popularity": 31,
+      "busyness_ratio": 0.19,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "rating_n": 566
+    },
+    {
+      "name": "2 Amys",
+      "address": "3715 Macomb Street Northwest Suite 201, Washington",
+      "coordinates": {
+        "lat": 38.9336381,
+        "lng": -77.0731129
+      },
+      "current_popularity": 10,
+      "typical_popularity": 53,
+      "busyness_ratio": 0.19,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 1635
+    },
+    {
+      "name": "Lincoln",
+      "address": "1110 Vermont Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9043976,
+        "lng": -77.0330063
+      },
+      "current_popularity": 14,
+      "typical_popularity": 73,
+      "busyness_ratio": 0.19,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1490
+    },
+    {
+      "name": "Sequoia DC",
+      "address": "3000 K Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90151799999999,
+        "lng": -77.05963
+      },
+      "current_popularity": 7,
+      "typical_popularity": 39,
+      "busyness_ratio": 0.18,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 2861
+    },
+    {
+      "name": "Nando's PERi-PERi",
+      "address": "836 F Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89705899999999,
+        "lng": -77.0235756
+      },
+      "current_popularity": 12,
+      "typical_popularity": 65,
+      "busyness_ratio": 0.18,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 2940
+    },
+    {
+      "name": "The Capital Grille",
+      "address": "601 Pennsylvania Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89311,
+        "lng": -77.020168
+      },
+      "current_popularity": 7,
+      "typical_popularity": 43,
+      "busyness_ratio": 0.16,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 2512
+    },
+    {
+      "name": "Papa Johns Pizza",
+      "address": "5310 Indian Head Highway, Oxon Hill",
+      "coordinates": {
+        "lat": 38.8172436,
+        "lng": -76.9983049
+      },
+      "current_popularity": 4,
+      "typical_popularity": 25,
+      "busyness_ratio": 0.16,
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 3.2,
+      "rating_n": 363
+    },
+    {
+      "name": "Five Guys",
+      "address": "808 H Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.899643,
+        "lng": -77.0234657
+      },
+      "current_popularity": 6,
+      "typical_popularity": 39,
+      "busyness_ratio": 0.15,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1156
+    },
+    {
+      "name": "Five Guys",
+      "address": "2300 Wilson Boulevard, Arlington",
+      "coordinates": {
+        "lat": 38.89051149999999,
+        "lng": -77.08696119999999
+      },
+      "current_popularity": 8,
+      "typical_popularity": 54,
+      "busyness_ratio": 0.15,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 746
+    },
+    {
+      "name": "Domino's Pizza",
+      "address": "208 Michigan Avenue Northeast, Washington",
+      "coordinates": {
+        "lat": 38.92972039999999,
+        "lng": -77.0043401
+      },
+      "current_popularity": 11,
+      "typical_popularity": 82,
+      "busyness_ratio": 0.13,
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 2.5,
+      "rating_n": 441
+    },
+    {
+      "name": "Pearl Dive Oyster Palace",
+      "address": "1612 14th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.91163409999999,
+        "lng": -77.0322039
+      },
+      "current_popularity": 7,
+      "typical_popularity": 54,
+      "busyness_ratio": 0.13,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "rating_n": 1291
+    },
+    {
+      "name": "Station 4",
+      "address": "1101 4th Street Southwest, Washington",
+      "coordinates": {
+        "lat": 38.8773237,
+        "lng": -77.0180438
+      },
+      "current_popularity": 7,
+      "typical_popularity": 57,
+      "busyness_ratio": 0.12,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "rating_n": 1908
+    },
+    {
+      "name": "Art and Soul at YOTEL Washington DC",
+      "address": "415 New Jersey Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.89546139999999,
+        "lng": -77.0108803
+      },
+      "current_popularity": 8,
+      "typical_popularity": 66,
+      "busyness_ratio": 0.12,
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1052
+    },
+    {
+      "name": "Five Guys",
+      "address": "1300 2nd Street Northeast, Washington",
+      "coordinates": {
+        "lat": 38.90829119999999,
+        "lng": -77.00367539999999
+      },
+      "current_popularity": 4,
+      "typical_popularity": 36,
+      "busyness_ratio": 0.11,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 816
+    },
+    {
+      "name": "Subway",
+      "address": "2301-B Georgia Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9209067,
+        "lng": -77.0218861
+      },
+      "current_popularity": 3,
+      "typical_popularity": 32,
+      "busyness_ratio": 0.09,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.4,
+      "rating_n": 162
+    },
+    {
+      "name": "District Taco",
+      "address": "656 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8852733,
+        "lng": -76.9966841
+      },
+      "current_popularity": 7,
+      "typical_popularity": 87,
+      "busyness_ratio": 0.08,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 1501
+    },
+    {
+      "name": "Firefly",
+      "address": "1310 New Hampshire Avenue Northwest, Washington",
+      "coordinates": {
+        "lat": 38.907616,
+        "lng": -77.0457149
+      },
+      "current_popularity": 8,
+      "typical_popularity": 100,
+      "busyness_ratio": 0.08,
+      "types": [
+        "night_club",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "rating_n": 993
+    },
+    {
+      "name": "sweetgreen",
+      "address": "221 Pennsylvania Avenue Southeast, Washington",
+      "coordinates": {
+        "lat": 38.8870045,
+        "lng": -77.0027339
+      },
+      "current_popularity": 4,
+      "typical_popularity": 54,
+      "busyness_ratio": 0.07,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 537
+    },
+    {
+      "name": "Peacock Caf\u00e9",
+      "address": "3251 Prospect Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.90611210000001,
+        "lng": -77.0641327
+      },
+      "current_popularity": 6,
+      "typical_popularity": 86,
+      "busyness_ratio": 0.07,
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "rating_n": 880
+    },
+    {
+      "name": "Lost Dog Cafe - South Arlington",
+      "address": "2920 Columbia Pike, Arlington",
+      "coordinates": {
+        "lat": 38.8622556,
+        "lng": -77.087644
+      },
+      "current_popularity": 4,
+      "typical_popularity": 63,
+      "busyness_ratio": 0.06,
+      "types": [
+        "restaurant",
+        "meal_delivery",
+        "liquor_store",
+        "meal_takeaway",
+        "bar",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 968
+    },
+    {
+      "name": "Panda Express",
+      "address": "3100 14th Street Northwest SUITE 105, Washington",
+      "coordinates": {
+        "lat": 38.9295555,
+        "lng": -77.0332379
+      },
+      "current_popularity": 4,
+      "typical_popularity": 62,
+      "busyness_ratio": 0.06,
+      "types": [
+        "meal_delivery",
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "rating_n": 655
+    },
+    {
+      "name": "Duccini's Pizza",
+      "address": "1778 U Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9167961,
+        "lng": -77.0412156
+      },
+      "current_popularity": 1,
+      "typical_popularity": 22,
+      "busyness_ratio": 0.05,
+      "types": [
+        "restaurant",
+        "meal_delivery",
+        "meal_takeaway",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 983
+    },
+    {
+      "name": "Belga Cafe",
+      "address": "514 8th Street Southeast, Washington",
+      "coordinates": {
+        "lat": 38.882189,
+        "lng": -76.994607
+      },
+      "current_popularity": 3,
+      "typical_popularity": 75,
+      "busyness_ratio": 0.04,
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "rating_n": 1215
+    },
+    {
+      "name": "Subway",
+      "address": "3825 Jefferson Davis Hwy Suite B, Alexandria",
+      "coordinates": {
+        "lat": 38.83889659999999,
+        "lng": -77.0515672
+      },
+      "current_popularity": 3,
+      "typical_popularity": 86,
+      "busyness_ratio": 0.03,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.3,
+      "rating_n": 76
+    },
+    {
+      "name": "Habesha Market Carry Out & Restaurant",
+      "address": "1919 9th Street Northwest, Washington",
+      "coordinates": {
+        "lat": 38.9163472,
+        "lng": -77.0237081
+      },
+      "current_popularity": 2,
+      "typical_popularity": 80,
+      "busyness_ratio": 0.03,
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "rating_n": 977
+    }
+  ]
+}
