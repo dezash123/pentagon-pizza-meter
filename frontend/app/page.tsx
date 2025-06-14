@@ -93,7 +93,7 @@ export default function PentagonPizzaTracker() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const baseUrl = 'http://localhost:8000' // Change this to your backend URL
+        const baseUrl = 'https://pentagon-pizza-meter-pf6o.onrender.com' // Change this to your backend URL
         
         // Fetch all data in parallel
         const [newsResponse, stocksResponse, pizzaResponse] = await Promise.all([

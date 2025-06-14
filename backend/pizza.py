@@ -192,7 +192,7 @@ def fetch_pizza_data():
         )
         
 # Global variable to store pizza data
-pizza_data: PizzaAnalysis = fetch_pizza_data()
+pizza_data: Optional[PizzaAnalysis] = None
 lock = Lock()
 
 def update_pizza_data():
@@ -202,4 +202,4 @@ def update_pizza_data():
 
 def get_pizza_data():
     with lock:
-        return pizza_data.copy()
+        return pizza_data.copy() if pizza_data else None

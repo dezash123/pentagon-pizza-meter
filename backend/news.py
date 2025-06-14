@@ -214,7 +214,7 @@ def fetch_news_data() -> DoomsdayAnalysis:
     )
 
 # Global variable to store news data
-news_data: DoomsdayAnalysis = fetch_news_data()
+news_data: Optional[DoomsdayAnalysis] = None
 lock = Lock()
 
 def update_news_data():

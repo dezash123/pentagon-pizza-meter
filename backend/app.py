@@ -69,19 +69,16 @@ async def get_stocks():
 
 @app.get("/news")
 async def get_news_analysis():
-    """Get comprehensive news analysis with doomsday probability"""
-    try:
-        return get_news_data()
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    return get_news_data()
 
 @app.get("/pizza")
 async def get_pizza_analysis():
-    return get_pizza_data() 
+    return get_pizza_data()
 
-# Startup event to initialize background tasks
+# Start background tasks immediately without waiting
 @app.on_event("startup")
 async def startup_event():
+    # Start background tasks but don't wait for them
     asyncio.create_task(stock_task())
     asyncio.create_task(news_task())
     asyncio.create_task(pizza_task())
