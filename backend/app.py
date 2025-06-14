@@ -1,4 +1,6 @@
 from dotenv import load_dotenv
+import json
+import os
 
 load_dotenv()
 
@@ -7,16 +9,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 import defense_stocks
 import news_analysis
-import os
-from dotenv import load_dotenv
 import populartimes
 import firebase_admin
 from firebase_admin import credentials, firestore
-import json
-
 
 # Initialize Firebase Admin SDK
-cred = credentials.Certificate("sak.json")
+firebase_credentials = json.loads(os.getenv('FIREBASE_CREDENTIALS', '{}'))
+cred = credentials.Certificate(firebase_credentials)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
