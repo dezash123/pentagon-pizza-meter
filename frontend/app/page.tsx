@@ -184,10 +184,10 @@ export default function PentagonPizzaTracker() {
     }))
 
   return (
-    <div className={`h-screen overflow-hidden ${isDarkMode ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" : "bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50"}`}>
-      <div className="h-full flex flex-col px-4 py-3">
+    <div className={`min-h-screen lg:h-screen lg:overflow-hidden ${isDarkMode ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" : "bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50"}`}>
+      <div className="h-full flex flex-col px-4 py-3 lg:overflow-hidden overflow-y-auto">
         {/* Enhanced Header */}
-        <div className="flex items-center justify-between mb-4 relative">
+        <div className="flex items-center justify-between mb-4 relative flex-shrink-0">
           <div className="flex items-center gap-3">
             <div className="relative group">
               <Image
@@ -229,14 +229,14 @@ export default function PentagonPizzaTracker() {
 
         {/* Enhanced Pizza Index Banner */}
         <Card
-          className={`mb-2 overflow-hidden ${
+          className={`mb-2 overflow-hidden flex-shrink-0 ${
             isDarkMode 
               ? "bg-gradient-to-r from-orange-900/50 to-red-900/50 border-orange-700/50" 
               : "bg-gradient-to-r from-orange-100 to-red-100 border-orange-300"
           } backdrop-blur-sm`}
         >
           <CardContent className="py-4">
-            <div className="flex items-center justify-center gap-8">
+            <div className="flex items-center justify-center gap-8 flex-wrap lg:flex-nowrap">
               <div className="text-center relative group">
                 <div className={`text-xs font-medium mb-1 ${isDarkMode ? "text-orange-300" : "text-orange-700"}`}>
                   PENTAGON PIZZA ACTIVITY
@@ -278,9 +278,9 @@ export default function PentagonPizzaTracker() {
         </Card>
 
         {/* Main Dashboard Grid */}
-        <div className="flex-1 grid grid-cols-12 gap-1 min-h-0">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-1 lg:min-h-0">
           {/* Map Section */}
-          <div className="col-span-7">
+          <div className="lg:col-span-7 h-96 lg:h-auto">
             <Card className={`h-full overflow-hidden ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
               <CardContent className="h-full p-0">
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
@@ -296,11 +296,11 @@ export default function PentagonPizzaTracker() {
           </div>
 
           {/* Right Panel */}
-          <div className="col-span-5 flex flex-col gap-2">
+          <div className="lg:col-span-5 flex flex-col gap-2">
             {/* Defense Stocks */}
             <Card className={`flex-shrink-0 ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
               <CardContent className="py-2">
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {stockData.map((stock) => (
                     <div
                       key={stock.symbol}
@@ -345,7 +345,7 @@ export default function PentagonPizzaTracker() {
             </Card>
 
             {/* News Feed */}
-            <Card className={`flex-1 ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
+            <Card className={`flex-1 lg:flex-1 ${isDarkMode ? "bg-gray-800/50 border-gray-700/50" : "bg-white/50 border-gray-200"} backdrop-blur-sm`}>
               <CardContent className="py-2">
                 <div className="space-y-3">
                   {data.news_analysis.detailed_news_analysis.articles
@@ -369,7 +369,7 @@ export default function PentagonPizzaTracker() {
                         <h3 className={`text-sm font-medium mb-1 line-clamp-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                           {article.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-xs">
+                        <div className="flex items-center gap-2 text-xs flex-wrap">
                           <span className={`px-2 py-0.5 rounded-full text-xs ${
                             article.severity > 0.7 
                               ? "bg-red-500/20 text-red-300" 
@@ -379,11 +379,11 @@ export default function PentagonPizzaTracker() {
                           }`}>
                             {(article.severity * 100).toFixed(0)}% Severity
                           </span>
-                          <span className={isDarkMode ? "text-gray-500" : "text-gray-600"}>•</span>
+                          <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
                           <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
                             {article.source}
                           </span>
-                          <span className={isDarkMode ? "text-gray-500" : "text-gray-600"}>•</span>
+                          <span className={`${isDarkMode ? "text-gray-500" : "text-gray-600"} hidden sm:inline`}>•</span>
                           <span className={isDarkMode ? "text-gray-400" : "text-gray-600"}>
                             {new Date(article.published).toLocaleTimeString()}
                           </span>
