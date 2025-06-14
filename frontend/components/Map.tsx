@@ -149,17 +149,19 @@ const FlowsOverlay = ({ restaurants, isDarkMode }: { restaurants: Restaurant[], 
       const mapSize = map.getSize()
       const pixelRatio = window.devicePixelRatio || 1
       
-      // Update canvas size
-      canvas.style.width = `${mapSize.x}px`
-      canvas.style.height = `${mapSize.y}px`
-      canvas.width = mapSize.x * pixelRatio
-      canvas.height = mapSize.y * pixelRatio
+      // Update canvas size only if it changed
+      if (canvas.width !== mapSize.x * pixelRatio || canvas.height !== mapSize.y * pixelRatio) {
+        canvas.style.width = `${mapSize.x}px`
+        canvas.style.height = `${mapSize.y}px`
+        canvas.width = mapSize.x * pixelRatio
+        canvas.height = mapSize.y * pixelRatio
+      }
       
       // Reset transform and scale
       ctx.setTransform(1, 0, 0, 1, 0, 0)
       ctx.scale(pixelRatio, pixelRatio)
       
-      // Apply map's current transform to canvas
+      // Apply map's current transform to canvas for smooth dragging
       const pos = map.containerPointToLayerPoint([0, 0])
       canvas.style.transform = `translate3d(${pos.x}px,${pos.y}px,0)`
     }
@@ -226,13 +228,13 @@ const FlowsOverlay = ({ restaurants, isDarkMode }: { restaurants: Restaurant[], 
         const startLatLng = L.latLng(restaurant.lat, restaurant.lng)
         const endLatLng = L.latLng(PENTAGON_CENTER[0], PENTAGON_CENTER[1])
         
-        // Get points in layer coordinates
-        const startPoint = map.latLngToLayerPoint(startLatLng)
-        const endPoint = map.latLngToLayerPoint(endLatLng)
+        // Get points in container coordinates (accounts for current map position)
+        const startContainer = map.latLngToContainerPoint(startLatLng)
+        const endContainer = map.latLngToContainerPoint(endLatLng)
         
-        // Convert to container coordinates for visibility check
-        const startContainer = map.layerPointToContainerPoint(startPoint)
-        const endContainer = map.layerPointToContainerPoint(endPoint)
+        // Use container points directly for drawing (they automatically update with map movement)
+        const startPoint = startContainer
+        const endPoint = endContainer
 
         // Check if either point is within the padded viewport
         const mapSize = map.getSize()
@@ -319,7 +321,12 @@ const FlowsOverlay = ({ restaurants, isDarkMode }: { restaurants: Restaurant[], 
 
     // Add map event listeners
     map.on('move', updateCanvas)
+    map.on('movestart', updateCanvas)
+    map.on('moveend', updateCanvas)
+    map.on('drag', updateCanvas)
     map.on('zoom', updateCanvas)
+    map.on('zoomstart', updateCanvas)
+    map.on('zoomend', updateCanvas)
     map.on('resize', updateCanvas)
 
     // Cleanup
@@ -332,7 +339,12 @@ const FlowsOverlay = ({ restaurants, isDarkMode }: { restaurants: Restaurant[], 
         canvas.parentNode.removeChild(canvas)
       }
       map.off('move', updateCanvas)
+      map.off('movestart', updateCanvas)
+      map.off('moveend', updateCanvas)
+      map.off('drag', updateCanvas)
       map.off('zoom', updateCanvas)
+      map.off('zoomstart', updateCanvas)
+      map.off('zoomend', updateCanvas)
       map.off('resize', updateCanvas)
     }
   }, [map, restaurants, isDarkMode])
@@ -397,7 +409,7 @@ export default function Map({ restaurants, isDarkMode, getActivityColor, getActi
         zoom={13}
         style={{ height: "100%", width: "100%" }}
         zoomControl={true}
-        dragging={false}
+        dragging={true}
         zoomAnimation={true}
         wheelDebounceTime={100}
         wheelPxPerZoomLevel={100}
