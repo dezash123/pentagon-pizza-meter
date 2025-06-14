@@ -151,7 +151,7 @@ def fetch_pizza_data():
         busy_places.sort(key=lambda x: abs(x.current_status.percent_difference), reverse=True)
         
         # Limit to maximum of 5 places
-        busy_places = busy_places[:5]
+        busy_places = busy_places[:10]
         
         metadata = PizzaMetadata(
             timestamp=datetime.now().isoformat(),

@@ -56,7 +56,7 @@ def fetch_fresh_headlines() -> List[Article]:
         params = {
             'apiKey': newsapi_key,
             'language': 'en',
-            'pageSize': 5,
+            'pageSize': 10,
             'country': 'us',
         }
         
