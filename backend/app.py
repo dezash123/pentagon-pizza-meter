@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 import defense_stocks
@@ -182,9 +182,54 @@ async def root():
         "endpoints": {
             "/update": "Get and save latest analysis of defense stocks, news, and pizza data",
             "/read": "Get the most recent analysis from the database",
-            "/pizza": "Get real-time pizza place busyness data around the Pentagon"
+            "/pizza": "Get real-time pizza place busyness data around the Pentagon",
+            "/test": "Test endpoint that logs POST request data"
         }
     }
+
+@app.post("/test")
+async def test_endpoint(request: Request):
+    """Test endpoint that logs and prints the received POST request data"""
+    try:
+        # Get the request body
+        body = await request.body()
+        
+        # Try to parse as JSON
+        try:
+            json_data = await request.json()
+            print("=== TEST ENDPOINT LOG ===")
+            print(f"Timestamp: {datetime.now().isoformat()}")
+            print(f"Request method: {request.method}")
+            print(f"Request URL: {request.url}")
+            print(f"Headers: {dict(request.headers)}")
+            print(f"JSON data: {json.dumps(json_data, indent=2)}")
+            print("=== END LOG ===")
+            
+            return {
+                "message": "Request logged successfully",
+                "received_data": json_data,
+                "timestamp": datetime.now().isoformat()
+            }
+        except:
+            # If not JSON, treat as raw text
+            raw_data = body.decode('utf-8')
+            print("=== TEST ENDPOINT LOG ===")
+            print(f"Timestamp: {datetime.now().isoformat()}")
+            print(f"Request method: {request.method}")
+            print(f"Request URL: {request.url}")
+            print(f"Headers: {dict(request.headers)}")
+            print(f"Raw data: {raw_data}")
+            print("=== END LOG ===")
+            
+            return {
+                "message": "Request logged successfully",
+                "received_data": raw_data,
+                "timestamp": datetime.now().isoformat()
+            }
+            
+    except Exception as e:
+        print(f"Error in test endpoint: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error processing request: {str(e)}")
 
 @app.get("/read")
 async def read_latest_analysis():
@@ -358,6 +403,8 @@ def calculate_pizza_status_distribution(places):
             "total_typical": len(distribution["typical"])
         }
     }
+
+
 
 if __name__ == "__main__":
     import uvicorn
